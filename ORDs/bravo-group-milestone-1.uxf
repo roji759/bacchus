@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>480</y>
+      <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_SUPPLIERS_
+--
+suppliers_id: int (primary)
+suppliers_name: VARCHAR(30)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>420</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>_SUPPLIES_
+--
+supplies_id: int (primary)
+supply_name: VARCHAR(30)
+quatity: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>730</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>_EMPLOYEES_
+--
+employee_id: int (primary)
+first_name: VARCHAR(30)
+last_name: VARCHAR(30)
+department: VARCHAR(30)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>680</y>
+      <w>210</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>_HOURS_
+--
+entry_id: int (primary)
+date: DATE
+hours_worked: int
+employee_id: int (foreign)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>250</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_DISTRIBUTORS_
+--
+distributors_id: int (primary)
+distributors_name: VARCHAR(30)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>740</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1.1
+m2=1.*
+</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>260</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1.*
+m2=1.1
+</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>170</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>_PRODUCT ORDERS_
+--
+product_order_id: int (primary)
+date_of_order: DATE
+product_id: int (foreign)
+quantity: int
+cost_per_unit: float
+distributors_id: int (foregin)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>940</x>
+      <y>210</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1.*
+m2=1.1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1060</x>
+      <y>200</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>_PRODUCTS_
+--
+product_id: int (primary)
+product_name: VARCHAR(30)
+quantity: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>430</y>
+      <w>450</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1.1
+m2=1.*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0;430.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1060</x>
+      <y>380</y>
+      <w>190</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>_SUPPLY ORDERS_
+--
+supply_order_id: int (primary)
+order_date: DATE
+supplies_id: int (foreign)
+quatity: int
+estimated_delivery: DATE
+actual_delivery: DATE
+suppliers_id: int (foreign)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>490</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1.1
+m2=1.*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>760</x>
+      <y>630</y>
+      <w>280</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_Employees &amp; Hours Tables_
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>740</x>
+      <y>100</y>
+      <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_Distributors &amp; Product Tables_
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>750</x>
+      <y>360</y>
+      <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_Supplies &amp; Suppliers Tables_
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
